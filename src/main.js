@@ -1,7 +1,7 @@
 let html = document.querySelector("#html");
 let style = document.querySelector("#style");
 
-let string = `/* 你好，我叫小方
+let string = `/* 你好，我叫小文
  * 接下来我演示一下我的前端功底
  * 首先我要准备一个div
  **/
@@ -52,8 +52,6 @@ let n = 0;
 
 let step = () => {
   setTimeout(() => {
-    // 如果是回车，就不照搬
-    // 如果不是回车就照搬
     if (string[n] === "\n") {
       string2 += "<br>";
     } else if (string[n] === " ") {
@@ -66,11 +64,10 @@ let step = () => {
     window.scrollTo(0, 99999);
     html.scrollTo(0, 99999);
     if (n < string.length - 1) {
-      // 如果 n 不是最后一个,就继续
       n += 1;
       step();
     }
-  }, 50);
+  }, 30);
 };
 
 step(); // 1=>2
